@@ -1,0 +1,739 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta name="google-site-verification" content="iJWr4oyKtnPlUNAjMBB5rVuiwmV1RsjJcCEJQve4VYo" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+
+<title>SIERRA MUN</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600" rel="stylesheet" type="text/css">
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+
+<!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
+
+<script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<script type="text/javascript" src="js/wow.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
+<script>
+    function initMap() {
+        var uluru = {lat: 28.022502, lng: 73.321815};
+        var map = new google.maps.Map(document.getElementById('map'), {zoom: 15,styles: [
+                                                                                        {
+                                                                                        "elementType": "geometry",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#ebe3cd"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "elementType": "labels.text.fill",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#523735"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "elementType": "labels.text.stroke",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#f5f1e6"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "administrative",
+                                                                                        "elementType": "geometry.stroke",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#c9b2a6"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "administrative.land_parcel",
+                                                                                        "elementType": "geometry.stroke",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#dcd2be"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "administrative.land_parcel",
+                                                                                        "elementType": "labels.text.fill",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#ae9e90"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "landscape.natural",
+                                                                                        "elementType": "geometry",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#dfd2ae"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "poi",
+                                                                                        "elementType": "geometry",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#dfd2ae"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "poi",
+                                                                                        "elementType": "labels.text.fill",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#93817c"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "poi.park",
+                                                                                        "elementType": "geometry.fill",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#a5b076"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "poi.park",
+                                                                                        "elementType": "labels.text.fill",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#447530"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "road",
+                                                                                        "elementType": "geometry",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#f5f1e6"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "road.arterial",
+                                                                                        "elementType": "geometry",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#fdfcf8"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "road.highway",
+                                                                                        "elementType": "geometry",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#f8c967"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "road.highway",
+                                                                                        "elementType": "geometry.stroke",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#e9bc62"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "road.highway.controlled_access",
+                                                                                        "elementType": "geometry",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#e98d58"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "road.highway.controlled_access",
+                                                                                        "elementType": "geometry.stroke",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#db8555"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "road.local",
+                                                                                        "elementType": "labels.text.fill",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#806b63"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "transit.line",
+                                                                                        "elementType": "geometry",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#dfd2ae"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "transit.line",
+                                                                                        "elementType": "labels.text.fill",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#8f7d77"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "transit.line",
+                                                                                        "elementType": "labels.text.stroke",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#ebe3cd"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "transit.station",
+                                                                                        "elementType": "geometry",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#dfd2ae"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "water",
+                                                                                        "elementType": "geometry.fill",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#b9d3c2"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        },
+                                                                                        {
+                                                                                        "featureType": "water",
+                                                                                        "elementType": "labels.text.fill",
+                                                                                        "stylers": [
+                                                                                                    {
+                                                                                                    "color": "#92998d"
+                                                                                                    }
+                                                                                                    ]
+                                                                                        }
+                                                                                        ],center: uluru});
+        var marker = new google.maps.Marker({position: uluru,map: map});
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1jke1QNWfHKabh19fpBha-zA0BShnQiA&callback=initMap"></script>
+
+<link rel="stylesheet" href="css/syntax.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!--<script src="jquery.js"></script>-->
+  <script src="js/lodash.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+
+</head>
+<body>
+    
+    
+<header class="header" id="header"><!--header-start-->
+	<div class="container">
+		<h1 class="animated fadeInDown delay-07s"><br/><img src="ui.png" width="600px"><br/></h1>
+		<h2 class="animated fadeInUp delay-1s" style="color:#fff;font-size: 20px;">9th - 10th &nbsp;February 2019</h2>
+        <!--<p id="de"><span id="d"></span><span id="h"></span><span id="m"></span><span id="s"></span></p>
+		<p><br/><a class="link animated fadeInUp delay-1s servicelink" href="#Applications"><img src="img/Background/app.png"></a></p>-->
+        <div class="home-welcome">
+      <div class="pure-u-1-2">
+        <div class="main-example">
+  
+  <div class="countdown-container" id="main-example"></div>
+</div>
+<script type="text/template" id="main-example-template">
+<div class="time <%= label %>">
+  <span class="count curr top"><%= curr %></span>
+  <span class="count next top"><%= next %></span>
+  <span class="count next bottom"><%= next %></span>
+  <span class="count curr bottom"><%= curr %></span>
+  <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+</div>
+</script>
+<script type="text/javascript">
+  $(window).on('load', function() {
+    var labels = ['weeks', 'days', 'hours', 'minutes', 'seconds'],
+      nextYear = (new Date().getFullYear() + 1) + '/01/01',
+      template = _.template($('#main-example-template').html()),
+      currDate = '00:00:00:00:00',
+      nextDate = '00:00:00:00:00',
+      parser = /([0-9]{2})/gi,
+      $example = $('#main-example');
+    // Parse countdown string to an object
+    function strfobj(str) {
+      var parsed = str.match(parser),
+        obj = {};
+      labels.forEach(function(label, i) {
+        obj[label] = parsed[i]
+      });
+      return obj;
+    }
+    // Return the time components that diffs
+    function diff(obj1, obj2) {
+      var diff = [];
+      labels.forEach(function(key) {
+        if (obj1[key] !== obj2[key]) {
+          diff.push(key);
+        }
+      });
+      return diff;
+    }
+    // Build the layout
+    var initData = strfobj(currDate);
+    labels.forEach(function(label, i) {
+      $example.append(template({
+        curr: initData[label],
+        next: initData[label],
+        label: label
+      }));
+    });
+    // Starts the countdown
+    $example.countdown("2019/02/09", function(event) {
+      var newDate = event.strftime('%w:%d:%H:%M:%S'),
+        data;
+      if (newDate !== nextDate) {
+        currDate = nextDate;
+        nextDate = newDate;
+        // Setup the data
+        data = {
+          'curr': strfobj(currDate),
+          'next': strfobj(nextDate)
+        };
+        // Apply the new values to each node that changed
+        diff(data.curr, data.next).forEach(function(label) {
+          var selector = '.%s'.replace(/%s/, label),
+              $node = $example.find(selector);
+          // Update the node
+          $node.removeClass('flip');
+          $node.find('.curr').text(data.curr[label]);
+          $node.find('.next').text(data.next[label]);
+          // Wait for a repaint to then flip
+          _.delay(function($node) {
+            $node.addClass('flip');
+          }, 50, $node);
+        });
+      }
+    });
+  });
+</script>
+
+      </div>
+    </div>
+	</div>
+</header><!--header-end-->
+
+
+<nav class="main-nav-outer" id="test"><!--main-nav-start-->
+	<div class="container">
+        <ul class="main-nav">
+        	<li style="font-size: 14px"><a href="#header">Home</a></li>
+            <li style="font-size: 14px"><a href="#about">About Us</a></li>
+            <li style="font-size: 14px"><a href="#Committees">Committees</a></li>
+            <li style="font-size: 14px"><a href="#Applications">Applications</a></li>
+            <li style="font-size: 14px"><a href="#Sponsors">Sponsors</a></li>
+            <li style="font-size: 14px"><a href="#Secretariat">Secretariat</a></li>
+            <li style="font-size: 14px"><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+    </div>
+</nav><!--main-nav-end-->
+
+
+<main>
+<section class="section-about" id="about"><!--main-section-start-->
+	<!--<div class="container">-->
+        <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary" style="color: rgb(0, 0, 0)">
+                    About Sierra Model United Nations
+                </h2>
+            </div>
+            
+
+    	<!--<h2>ABOUT SIERRA MUN<hr style="width:15%;border-color:#;border-width:3px;"/></h2>--></div>
+        <div class="row">
+                <div class="col-1-of-2">
+
+        <!--<p class="padding-b" style="text-align:centre;color: #3e3e3e">-->
+           <p class="paragraph" style="font-size: 15px"> 
+            <em>"As the young leaders of tomorrow you have the passion, energy and commitment to make a
+                            difference. What I would like to really urge you do is to have a global vision. Go beyond
+                            your
+                            countries; go beyond your national boundaries."</em>
+
+                        -Ban Ki-moon <br><br>
+
+                        Welcome to the crazy and diplomatic world of Model UN!
+
+                        This will be a journey that will teach you about the world, let you develop life changing
+                        skills and make friends with excellent people you'd never met otherwise. You will learn to
+                        research, speak publicly, think critically and develop leadership skills. You will travel, have
+                        fun, laugh, cry, learn the art of teamwork and come out inspired and empowered to make the
+                        world a better place. <br>
+
+                        LNMIIT MUN 2k19 brings to you this efficacious opportunity where you can explore yourself and
+                        this world. The novice will get a taste of diplomacy and the extremes will get a perfect
+                        platform to keep their points on, getting a chance to debate amongst the consummate delegates.
+                        <br>
+
+                        LNMIIT MUN consists of UNHRC, DISEC and Lok Sabha. You can try out your skills in the one you
+                        prefer to, because ,"your preference is our priority". Also, it will be a two day conference
+                        scheduled on 12th Jan and 13th Jan 2k19. <br>
+                        So, get yourself registered in this much awaited version of LNMIIT MUN and you are assured to
+                        name it as "worth waiting", once you be a part of it.
+                        Mark the dates!
+
+</p></div>
+<div class="col-1-of-2">
+                    <div class="composition">
+                         <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 1" class="composition__photo composition__photo--p1" src="img/Background/back.png">
+
+                        <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 2" class="composition__photo composition__photo--p2" src="img/Background/back.png">
+
+                        <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 3" class="composition__photo composition__photo--p3" src="img/Background/back.png">
+                             <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 4" class="composition__photo composition__photo--p4" src="img/Background/back.png">
+                             <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 5" class="composition__photo composition__photo--p5" src="img/Background/back.png">
+</div></div>
+</div>
+	</div>
+</section>
+<section class="section-features" id="organiser">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary" style="color: rgb(201, 201, 201)">
+                    Organiser's Desk
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <p class="paragraph" style="color: rgb(201, 201, 201)">
+                        Dear friends, It gives me immense pleasure to bring you the 5th edition of LNMIIT Model United
+                        Nations, to be held on 12<sup>th</sup>-13<sup>th</sup> of January, 2019 at LNMIIT, Jaipur. It
+                        is my privilege to lead
+                        the team which will be your host for this conference. Every MUN that I have been a part of, has
+                        strengthened the belief, that an MUN is the most complete form of debate. It is a great
+                        opportunity to enhance skills in research, writing, public speaking, problem solving, consensus
+                        building and crisis management. It gives you the honor of being an ambassador of a country.
+                        More importantly, it entrusts you with the task of solving global issues. With LNMIIT MUN, we
+                        intend to provide you a platform to discuss and deliberate on realistic issues through an
+                        assemblage of committees, led by a brilliant Executive Board. The team is committed to make
+                        your experience enjoyable and rewarding through a structured environment. We hope to make the
+                        conference a landmark MUN and aspire for your support in doing so. I welcome you again and look
+                        forward to see you all here at LNMIIT MUN 2019.
+                    </p>
+                    <div class="org-name" style="color: rgb(201, 201, 201); text-align: right">
+                        <strong>
+                            <h1>- Ayushi Agarwal</h1><br>
+                            <h1> Secretary General</h1>
+                        </strong>
+                    </div>
+                     
+                </div>
+                <div class="col-1-of-2">
+                    <div class="composition">
+
+
+
+                        <img srcset="img/Secretariat/AyushiAgarwal.jpg 300w, img/Secretariat/AyushiAgarwal.jpg 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 3" class="composition__photo org-pic" style="background: transparent" src="img/Secretariat/AyushiAgarwal.jpg">
+                             
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+</main>
+
+
+       
+
+
+
+<section class="main-section paddind" id="Committees"><!--main-section-start-->
+    
+	<div class="container">
+        
+    	<h2>COMMITTEES<hr style="width:15%;border-color:#7cc576;border-width:3px;"/></h2>
+        <br/>
+    <div class="portfolioContainer wow fadeInUp delay-04s">
+        
+        <div class="Portfolio-box">
+            <img src="img/Committees/disec.png" alt="AIPPM">
+            <h3>GA DISEC</h3>
+            <!--<span>Co-Chairperson : Sarthak Tandon<br/>Co-Chairperson : Arveen Chug<br/>Director : Anirudh Agarwal</span>-->
+        </div>
+        
+        <div class="Portfolio-box">
+            <img src="img/Committees/eco.png" alt="Human Rights Council">
+            <h3>ECOSOC</h3>
+            <!--<span>Chairperson : Sakshi Uniyal<br/>Vice-Chairperson : Harishankar P<br/>Director : Kasyap Pasumarthy</span>-->
+        </div>
+        
+        <div class=" Portfolio-box">
+            <img src="img/Committees/child.png" alt="Futuristic Security Council">
+            <h3>UNICEF</h3>
+            <!--<span>President : Neel Duttaroy<br/>Deputy President : Barnamoy Roy<br/>Director : Madhav Singh</span>-->
+        </div>
+        
+        <div class=" Portfolio-box" >
+            <img src="img/Committees/aippm.png" alt="Crisis Committee">
+            <h3>AIPPM</h3>
+           <!-- <span>Chairperson : D M Varun<br/>Vice-Chairperson : Ayush R<br/>Director : Kumar Prasun</span> -->
+        </div>
+
+         
+        
+    </div>
+    
+</section><!--main-section-end-->
+
+
+<section class="main-section client-part" id="Applications"><!--main-section client-part-start-->
+	<div class="container">
+		<h2 style="color:#fff">APPLICATIONS<hr style="width:15%;border-color:#7cc576;border-width:3px;"/></h2>
+    	<div class="row">
+        	<div class="col-lg-12">
+                <p class="wow fadeInDown delay-05" style="color:#d2d2d2;"></p>
+            </div>
+        </div>
+    	<ul class="client wow fadeIn delay-05s">
+            <li><a href="#">
+            	<img src="img/Application/eb.png" alt="">
+                <h3>Executive Board</h3>
+                <span>Applications Closed</span>
+            </a></li>
+            <li><a href="https://goo.gl/forms/fRN5k1G4VpTKkuxq2">
+                <img src="img/Application/delegates.png" alt="">
+                <h3>Delegates</h3>
+                <span>Applications Open</span>
+            </a></li>
+            <li><a href="https://goo.gl/forms/SFEmvSaoditoTA1H3">
+                <img src="img/Application/press.png" alt="">
+                <h3>International Press</h3>
+                <span>Applications Open</span>
+            </a></li>
+        </ul>
+    </div>
+    
+    
+</section><!--main-section client-part-end-->
+<div class="c-logo-part" id="Sponsors"><!--c-logo-part-start-->
+	<div class="container">
+        <h2 style="color:#fff">SPONSORS AND ASSOCIATIONS<hr style="width:15%;border-color:#000000;border-width:3px;"/><br/></h2>
+    	<!--<ul>
+        	<li><a href="#"><img src="img/Sponsors/logo1.png" alt=""></a></li>
+            <li><a href="#"><img src="img/Sponsors/logo2.png" alt=""></a></li>
+            <li><a href="#"><img src="img/Sponsors/logo3.png" alt=""></a></li>
+            <li><a href="#"><img src="img/Sponsors/logo4.png" alt=""></a></li>
+            <li><a href="#"><img src="img/Sponsors/logo5.png" alt=""></a></li>
+    	</ul>-->
+	</div>
+</div><!--c-logo-part-end-->
+
+
+
+<section class="main-section team" id="Secretariat"><!--main-section team-start-->
+	<div class="container">
+        <h2>SECRETARIAT<hr style="width:15%;border-color:#7cc576;border-width:3px;"/><br/></h2>
+        <div class="team-leader-block clearfix">
+            
+            <div class="team-leader-box" style="float: center">
+                <div class="team-leader wow fadeInDown delay-03s">
+                    <div class="team-leader-shadow"><a href="#"></a></div>
+                    <img src="img/Secretariat/mahima.jpg" alt="">
+                        <ul>
+                    
+                            <li><a href="https://www.facebook.com/sudeep.k.arora" class="fa-facebook"></a></li>
+                        </ul>
+                        </div>
+                <h3 class="wow fadeInDown delay-03s">Suddep Kaur Arora</h3>
+                <span class="wow fadeInDown delay-03s">DSG</span>
+            </div>
+           
+
+
+            
+
+            
+        
+
+            </div>
+    </div>
+</section><!--main-section team-end-->
+
+
+
+<section class="business-talking"><!--business-talking-start-->
+	<div class="container">
+        <h2>Contact Us<hr style="width:15%;border-color:#7cc576;border-width:3px;"/></h2>
+    </div>
+</section><!--business-talking-end-->
+
+
+
+<section class="main-section contact" id="contact">
+    
+    <div class="container">
+        <div class="row">
+        	<div class="col-lg-6 col-sm-7 wow fadeInLeft">
+            	<div class="contact-info-box address clearfix">
+                	<!--<h3><i class=" icon-map-marker"></i>Address:</h3>
+                    <span>ITM University, </br> AH-43 Bypass, Jhansi Rd, Gwalior,</br> Madhya Pradesh 475001</span>-->
+                </div>
+                <div class="contact-info-box phone clearfix">
+                	<h3><i class="fa-phone"></i>Phone:</h3>
+                	<span>+91 8107109086 | +91 8560027723</span>
+                </div>
+                <div class="contact-info-box email clearfix">
+                	<h3><i class="fa-pencil"></i>email:</h3>
+                	<span>bikanermun@gmail.com</span>
+                </div>
+                <ul class="social-link">
+                   <!-- <li class="twitter"><a href="#"><i class="fa-twitter"></i></a></li>-->
+                    <li class="facebook"><a href="https://www.facebook.com/ITMMUN/?ref=br_rs"><i class="fa-facebook"></i></a></li>
+                    <!--<li class="instagram"><a href="#"><i class="fa-instagram"></i></a></li>-->
+                </ul>
+            </div>
+                <!--<div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s" id=map></div>-->
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="footer">
+    <div class="container">
+        <span class="copyright">&copy; BIKANER MUN </span>
+    </div>
+</footer>
+
+
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $('#test').scrollToFixed();
+        $('.res-nav_click').click(function(){
+            $('.main-nav').slideToggle();
+            return false
+
+        });
+
+    });
+</script>
+
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100
+      }
+    );
+    wow.init();
+  </script>
+
+
+<script type="text/javascript">
+	$(window).load(function(){
+
+		$('.main-nav li a, .servicelink').bind('click',function(event){
+			var $anchor = $(this);
+
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top - 102
+			}, 1500,'easeInOutExpo');
+			/*
+			if you don't want to use the easing effects:
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1000);
+			*/
+			event.preventDefault();
+		});
+	})
+</script>
+
+<script type="text/javascript">
+
+$(window).load(function(){
+
+
+  var $container = $('.portfolioContainer'),
+      $body = $('body'),
+      colW = 375,
+      columns = null;
+
+
+  $container.isotope({
+    // disable window resizing
+    resizable: true,
+    masonry: {
+      columnWidth: colW
+    }
+  });
+
+  $(window).smartresize(function(){
+    // check if columns has changed
+    var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
+    if ( currentColumns !== columns ) {
+      // set new column count
+      columns = currentColumns;
+      // apply width to container manually, then trigger relayout
+      $container.width( columns * colW )
+        .isotope('reLayout');
+    }
+
+  }).smartresize(); // trigger resize to set container width
+  $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+
+            filter: selector,
+         });
+         return false;
+    });
+
+});
+
+</script>
+
+</body>
+</html>
