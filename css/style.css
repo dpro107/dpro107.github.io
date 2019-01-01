@@ -184,7 +184,7 @@ color: #fff;
 	border-bottom:1px solid #dddddd;
 	box-shadow:0 4px 5px -3px #ececec;
 	position:relative;
-	background:#3f3f3f;
+	background:#000;
 }
 .main-nav{
 	text-align:center;
@@ -198,7 +198,7 @@ color: #fff;
 }
 .main-nav li a{
 	display:inline-block;
-	color:#fff;
+	color:#858584;
 	text-transform:uppercase;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
@@ -211,7 +211,7 @@ color: #fff;
 
 .main-nav li a:hover{ 
 	text-decoration:none;
-	color: #7cc576;
+	color: #b2afaf;
 }
 
 .small-logo{ 
@@ -220,12 +220,12 @@ color: #fff;
 
 .main-section{
 	padding:90px 0 110px;
-	background-image: linear-gradient(to right,#636363,#858584); 
+	background-color: #858584;
     
 }
 .section-about {
-  background-color: #f7f7f7;
-  padding: 5rem 0;
+	background-color: #858584;
+	padding: 5rem 0;
   /*margin-top: -20vh;*/
 }
 
@@ -366,9 +366,11 @@ color: #fff;
   .composition__photo {
     float: left;
     position: relative;
-    width: 33.33333333%;
+    width: 63.33333333%;
     -webkit-box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
     box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+    top: -3rem;
+    right: 9rem;
   }
 }
 
@@ -475,13 +477,12 @@ color: #fff;
 }
 .section-features {
   padding: 5rem 0;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(27, 27, 26, 0.9)), to(rgba(108, 109, 106, 0.9))), url(../media/mun/nat-4.jpg);
-  background-image: linear-gradient(to right bottom, rgba(27, 27, 26, 0.9), rgba(58, 59, 56, 0.9)), url(../media/mun/nat-4.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(7, 7, 6, 0.9)), to(rgba(108, 109, 106, 0.9))), url(../media/mun/nat-4.jpg);
+  background-image: linear-gradient(to right bottom, rgba(7, 7, 6, 0.9), rgba(38, 39, 36, 0.9)), url(../media/mun/nat-4.jpg);
   background-size: cover;
   background-attachment: fixed;
  /* -webkit-transform: skewY(-7deg);
   transform: skewY(-7deg);*/
-  margin-top: -2rem;
 }
 
 /*.section-features>* {
@@ -715,7 +716,7 @@ img {
 /* Clients
 ---------------------------------*/
 .client-part{
-	background:url(../img/Background/section1.jpg) center center no-repeat;
+	background:url(../img/Background/back.pngw) center center no-repeat;
 	background-size:cover;
 	padding:55px 0;
 	text-align:center;
@@ -1189,7 +1190,11 @@ border: 2px solid #fff;
 	animation-delay: 1.2s; 
 	-webkit-animation-delay: 1.2s; 
 }
-.container1 {
+
+
+/*team design*/
+
+  .container1 {
   width  : 960px;
   margin : 0 auto;
 }
@@ -1745,6 +1750,8 @@ border: 2px solid #fff;
   left : 0px;
   transition : all .3s;
 }
+
+/* committees */
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
 figure.snip1256 {
   font-family: 'Raleway', Arial, sans-serif;
@@ -1762,6 +1769,7 @@ figure.snip1256 {
   font-size: 16px;
   -webkit-perspective: 50em;
   perspective: 50em;
+  float:left;
 }
 figure.snip1256 * {
   -webkit-box-sizing: border-box;
