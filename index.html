@@ -18,6 +18,14 @@
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
 <link href="css/responsive.css" rel="stylesheet" type="text/css">
 <link href="css/animate.css" rel="stylesheet" type="text/css">
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" type="text/css" href="css/windy.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.ui.slider.css">
+		<!--<link rel="stylesheet" type="text/css" href="css/demo.css" />-->
+		<link rel="stylesheet" type="text/css" href="css/style3.css" />
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+		<noscript><link rel="stylesheet" type="text/css" href="css/noJS.css" /></noscript>
 
 <!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
 
@@ -417,19 +425,38 @@
 
 </p></div>
 <div class="col-1-of-2">
-                    <div class="composition">
-                         <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                            alt="Photo 1" class="composition__photo composition__photo--p1" src="img/Background/back.png">
+	<div class="row">
+                   <div class="composition">
+                            <section class="main">
 
-                        <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                            alt="Photo 2" class="composition__photo composition__photo--p2" src="img/Background/back.png">
 
-                        <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                            alt="Photo 3" class="composition__photo composition__photo--p3" src="img/Background/back.png">
-                             
-</div></div>
-</div>
-	</div>
+				<div class="windy-demo windy-demo-3">
+					<div class="row">
+					<ul id="wi-el" class="wi-container">
+						<li><img src="img/Background/back.png" alt="image1"/></li>
+						<li><img src="img/Background/back.png" alt="image2"/></li>
+						<li><img src="img/Background/back.png" alt="image3"/></li>
+						<li><img src="img/Background/back.png" alt="image4"/></li>
+						<li><img src="img/Background/back.png" alt="image5"/></li>
+						<li><img src="iimg/Background/back.png" alt="image6"/></li>
+						<li><img src="img/Background/back.png" alt="image7"/></li>
+						<li><img src="img/Background/back.png" alt="image8"/></li>
+						<li><img src="img/Background/back.png" alt="image9"/></li>
+						<li><img src="images/demo3/10.jpg" alt="image10"/></li>
+						<li><img src="images/demo3/11.jpg" alt="image11"/></li>
+						<li><img src="images/demo3/12.jpg" alt="image12"/></li>
+						<li><img src="images/demo3/13.jpg" alt="image13"/></li>
+						<li><img src="images/demo3/14.jpg" alt="image14"/></li>
+				
+					</ul>
+				</div>
+					<div id="slider"></div>
+				</div>
+			</section>
+			
+        </div>
+        
+	</div></div></div></div>
 </section>
 <section class="section-features" id="organiser">
             <div class="u-center-text u-margin-bottom-big">
@@ -918,6 +945,37 @@ $(window).load(function(){
 });
 
 </script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.windy.js"></script>
+        <script type="text/javascript">	
+			$(function() {
+
+				var $el = $( '#wi-el' ),
+					windy = $el.windy( {
+						// rotation and translation boundaries for the items transitions
+						boundaries : {
+							rotateX : { min : 40 , max : 90 },
+							rotateY : { min : -15 , max : 15 },
+							rotateZ : { min : -5 , max : 5 },
+							translateX : { min : -200 , max : 200 },
+							translateY : { min : -300 , max : -200 },
+							translateZ : { min : 50 , max : 100 }
+						}
+					} );
+
+				$( '#slider' ).slider( {
+					animate : true,
+					min: 0,
+					max: windy.getItemsCount() - 1,
+					slide: function( event, ui ) {
+
+						windy.navigate( ui.value );
+
+					}
+				} );
+
+			});
+		</script>
 
 </body>
 </html>
