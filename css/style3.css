@@ -1,12 +1,12 @@
 .windy-demo {
-	width: 416px;
+	width: 316px;
 	margin: 40px auto;
 	color: #aaa;
 }
 
 .windy-demo ul.wi-container {
 	width: 420px;
-	height: 320px;
+	height: 210px;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
