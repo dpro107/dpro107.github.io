@@ -6,6 +6,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1">
 
+
 <title>SIERRA MUN</title>
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
@@ -18,8 +19,9 @@
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
 <link href="css/responsive.css" rel="stylesheet" type="text/css">
 <link href="css/animate.css" rel="stylesheet" type="text/css">
-	
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css' />
+
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css' />
 		<link rel="stylesheet" type="text/css" href="css/windy.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquery.ui.slider.css">
 		<!--<link rel="stylesheet" type="text/css" href="css/demo.css" />-->
@@ -265,13 +267,668 @@
   <script src="js/lodash.min.js"></script>
   <script src="js/jquery.countdown.min.js"></script>
 
+
+  <!--team design-->
+<style>
+  .container1 {
+  width  : 960px;
+  margin : 0 auto;
+}
+
+.container1:after{
+  clear   : both;
+  display : table;
+  content : '';
+}
+
+.bg-items {
+  padding: 20px;
+  width  : 280px;
+  height : 200px;
+  margin : 10px;
+  background-color: black;
+  float  : left;
+  cursor : pointer;
+  box-shadow : 3px 3px 5px 0px rgba(0,0,0,0.5);
+}
+
+.items {
+  width  : 240px;
+  height : 160px;
+  position: relative;
+  overflow: hidden;
+  background-color: #102B46;
+}
+
+.details {
+  background-color : rgba(0,0,0,0.5);
+  width            : 250px;
+  height           : 160px;
+  padding          : 10px;
+  top : 0;
+  left: 0;
+  font-family : georgia;
+  color       : #fff;
+  opacity : 0;
+  transition : opacity .8s;
+}
+
+.details h3 {
+  margin-bottom : 20px;
+}
+
+.details h6 {
+  text-align : right;
+  margin-top : 40px;
+}
+
+.details p {
+  font-size : 14px;
+  font-style: italic;
+  text-align: center;
+  line-height : 20px;
+}
+
+.items:hover .details {
+  opacity : 1;
+  transition : opacity .2s .3s;
+}
+
+.items div {
+  position : absolute;
+}
+
+/* one */
+
+.one {
+  left   : 100%;
+  bottom : 100%;
+  width : inherit;
+  height: inherit;
+  background-color : #e43;
+  transition   : all .3s;
+}
+
+.items:hover .one {
+  transition   : all .3s;
+  left   : 0;
+  bottom : 0;
+}
+
+/* two */
+
+.two {
+  width : inherit;
+  height: inherit;
+  background-color : #e43;
+  transition   : all .3s;
+  left   : 0;
+  bottom : 100%;
+}
+
+.items:hover .two {
+  transform : rotate(180deg);
+  left   : 0;
+  bottom : 0;
+  transition   : all .3s;
+}
+
+/* three */
+
+.three {
+  left : 0;
+  top  : 0;
+  width : inherit;
+  height: inherit;
+  background-color : #e43;
+  transition   : all .3s;
+  transform: scale(0,0);
+}
+
+.items:hover .three {
+  left : 0;
+  top  : 0;
+  transform : scale(1,1);	
+  transition : all .3s;
+}
+
+/* four */
+
+.four {
+  width : inherit;
+  height: inherit;
+  background-color : #e43;
+  transition   : all .3s;
+  left : 0;
+  top  : 0;
+  transform: scale(0,0) rotate(0deg);
+}
+
+.items:hover .four {
+  left : 0;
+  top  : 0;
+  transform: scale(1,1) rotate(1080deg);
+  transition   : all .3s;
+}
+
+/* five */
+
+.tl5 {
+  border-top   : 161px solid #e43;
+  border-right : 241px solid transparent;
+  top  : -160px;
+  left : -240px;
+  transition   : all .3s;			
+}
+
+.br5 {
+  border-bottom : 161px solid #e43;
+  border-left   : 241px solid transparent;
+  bottom : -160px;
+  right  : -240px;
+  transition   : all .3s;			
+}
+
+.items:hover .tl5 {
+  top  : 0;
+  left : 0;
+  transition   : all .3s;
+}
+
+.items:hover .br5 {
+  bottom : 0;
+  right  : 0;
+  transition   : all .3s;
+}
+
+/* six */
+
+.tl6 {
+  width  : 120px;
+  height : 80px;
+  background-color: #e43;
+  top  : -80px;
+  left : -240px;
+  transition   : all .3s;			
+}
+
+.tr6 {
+  width  : 120px;
+  height : 80px;
+  background-color: #e43;
+  top   : -80px;
+  right : -240px;
+  transition   : all .3s;			
+}
+
+.br6 {
+  width  : 120px;
+  height : 80px;
+  background-color: #e43;
+  bottom: -80px;
+  right : -240px;
+  transition   : all .3s;
+}
+
+.bl6 {
+  width  : 120px;
+  height : 80px;
+  background-color: #e43;
+  bottom : -80px;
+  left   : -240px;
+  transition   : all .3s;
+}
+
+.items:hover .tl6 {
+  top  : 0;
+  left : 0;
+  transition   : all .3s;
+}
+
+.items:hover .tr6 {
+  top   : 0;
+  right : 0;
+  transition   : all .3s;
+}
+
+.items:hover .br6 {
+  bottom : 0;
+  right  : 0;
+  transition   : all .3s;
+}
+
+.items:hover .bl6 {
+  bottom : 0;
+  left   : 0;
+  transition   : all .3s;
+}
+
+/* seven */
+
+.seven {
+  width  : 240px;
+  height : 160px;
+  background-color : #e43;
+  opacity : 0;
+  transition   : all .3s;
+}
+
+.items:hover .seven {
+  opacity    : 1;
+  transition : all .3s;
+}
+
+/* eight */
+
+.eight {
+  top           : 30%;
+  left          : 10%;
+  border-right  :  100px solid transparent;
+  border-bottom :  70px  solid #e43;
+  border-left   :  100px solid transparent;
+  transform: rotate(35deg) scale(0,0);
+  transition : all .6s;
+}
+
+.eight:before {
+  border-bottom: 80px solid #e43;
+  border-left  : 30px solid transparent;
+  border-right : 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  transform: rotate(-35deg);			   
+}
+
+.eight:after {
+  position: absolute;
+  display: block;
+  color: #e43;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid #e43;
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+}
+
+.items:hover .eight {
+  transform: rotate(35deg) scale(3.5,3.5);
+  transition : all .6s;
+  
+}
+
+/* nine */
+
+.nine {
+  width : 0;
+  height: 0;
+  top   : 50%;
+  left  : 50%;
+  background-color: #e43;
+  border-radius : 50%;
+  transition : all .3s;
+}
+
+.items:hover .nine {
+  width : 340px;
+  height: 260px;
+  top   : -50px;
+  left  : -50px;
+  transition : all .6s;
+  
+}
+
+/* ten */
+
+.ten {
+  width  : inherit;
+  height : 40px;
+  background-color: #e43;
+  left   : 100%;
+}
+
+.ten.i {
+  top : 0;
+  transition : all .2s;
+}
+
+.ten.ii {
+  top : 40px;
+  transition : all .4s;
+}
+
+.ten.iii {
+  top : 80px;
+  transition : all .6s;
+}
+
+.ten.iv {
+  top : 120px;
+  transition : all .8s;
+}
+
+.items:hover .i {
+  left : 0;
+  transition : all .2s;			
+}
+
+.items:hover .ii {
+  left : 0;
+  transition : all .4s;
+}
+
+.items:hover .iii {
+  left : 0;
+  transition : all .6s;
+}
+
+.items:hover .iv {
+  left : 0;
+  transition : all .8s;
+}
+
+/* eleven */
+
+.eleven {
+  width  : inherit;
+  height : 40px;
+  background-color: #e43;
+  transition : all .3s;
+}
+
+.eleven.i {
+  top : 0;
+  left : -100%;
+  
+}
+
+.eleven.ii {
+  top : 40px;
+  left : 100%;
+}
+
+.eleven.iii {
+  top : 80px;
+  left : -100%;
+}
+
+.eleven.iv {
+  left : 100%;
+  top  : 120px;
+}
+
+.items:hover .eleven {
+  left : 0;
+  transition : all .4s ;
+}
+
+/* twelve */
+
+.twelve {
+  width  : inherit;
+  height : 40px;
+  background-color: #e43;
+  transition : all .3s;
+  top : -40px;
+}
+
+.twelve.iv {
+  transition : all .1s;
+}
+
+.twelve.iii {
+  transition : all .1s .1s;
+}
+
+.twelve.ii {
+  transition : all .1s .2s;
+}
+
+.twelve.i {
+  transition : all .1s .3s;
+}
+
+.items:hover .twelve.i {
+  top : 120px;
+  transition : all .2s;
+}
+
+.items:hover .twelve.ii {
+  top : 80px;
+  transition : all .2s .2s ;
+}
+
+.items:hover .twelve.iii {
+  top : 40px;
+  transition : all .2s .4s ;
+}
+
+.items:hover .twelve.iv {
+  top : 0px;
+  transition : all  .2s .6s;
+}
+
+/* thirteen */
+
+.thirteen-r , .thirteen-l{
+  width : 120px;
+  height: inherit;
+  background-color : #e43;
+  top : 0;
+  transition : all .3s;
+}
+
+.thirteen-r {
+  left : 100%;
+}
+
+.thirteen-l {
+  right : 100%;
+}
+
+.items:hover .thirteen-r {
+  transition : all .3s;
+  left : 0;
+}
+
+.items:hover .thirteen-l {
+  transition : all .3s;
+  right : 0;
+}
+
+/* fourteen */
+
+.fourteen-r , .fourteen-l{
+  width : 120px;
+  height: inherit;
+  background-color : #e43;
+  top : 0;
+  transition : all .3s;
+}
+
+.fourteen-r {
+  left : 100%;
+}
+
+.fourteen-l {
+  right : 100%;
+}
+
+.items:hover .fourteen-r {
+  transition : all .3s;
+  left : 50%;
+}
+
+.items:hover .fourteen-l {
+  transition : all .3s;
+  right : 50%;
+}
+
+/* fifteen */
+
+.t {
+  border-style : solid;
+  border-width : 80px 120px 0 120px;			
+  border-color : #e43 transparent transparent transparent;
+  transition   : all .3s;
+  top : -80px;
+}
+
+.r {
+  border-style : solid;
+  border-width : 80px 120px 80px 0;	
+  border-color : transparent #e43 transparent transparent;
+  right : -120px;
+  transition   : all .3s;
+}
+
+.b {
+  border-style : solid;
+  border-width : 0 120px 80px 120px;
+  border-color : transparent transparent #e43 transparent;
+  bottom : -80px;
+  transition   : all .3s;
+}
+
+.l {
+  border-style : solid;
+  border-width : 80px 0 80px 120px;	
+  border-color : transparent transparent transparent #e43;
+  left : -120px;
+  transition   : all .3s;
+}
+
+
+.items:hover .t {
+  top : 0px;
+  transition : all .3s;
+}
+
+.items:hover .r {
+  right : 0px;
+  transition : all .3s;
+}
+
+.items:hover .b {
+  bottom : 0px;
+  transition : all .3s;
+}
+
+.items:hover .l {
+  left : 0px;
+  transition : all .3s;
+}
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+figure.snip1256 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 440px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  background-color: #07090c;
+  font-size: 16px;
+  -webkit-perspective: 50em;
+  perspective: 50em;
+}
+figure.snip1256 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+figure.snip1256 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+figure.snip1256 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% -50%;
+  -ms-transform-origin: 50% -50%;
+  transform-origin: 50% -50%;
+  z-index: 1;
+  opacity: 0;
+  padding: 20px 30px;
+}
+figure.snip1256 h3,
+figure.snip1256 p {
+  line-height: 1.5em;
+}
+figure.snip1256 h3 {
+  margin: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+figure.snip1256 p {
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0 0 15px;
+}
+figure.snip1256 .read-more {
+  border: 2px solid #ffffff;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+}
+figure.snip1256 .read-more:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+figure.snip1256:hover img,
+figure.snip1256.hover img {
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  opacity: 0;
+}
+figure.snip1256:hover figcaption,
+figure.snip1256.hover figcaption {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+</style>
+
 </head>
 <body>
+
     
     
 <header class="header" id="header"><!--header-start-->
 	<div class="container">
-		<img src="img/Background/bml.png" style="float: left; margin-top: -40px; margin-left: -60px; width: 70px">
+		<img src="bml.png" style="float: left; margin-top: -40px; margin-left: -60px; width: 70px">
 		<h1 class="animated fadeInDown delay-07s"><br/><img src="ui.png" width="600px"><br/></h1>
 		<h2 class="animated fadeInUp delay-1s" style="color:#fff;font-size: 20px;">9th - 10th &nbsp;February 2019</h2>
         <!--<p id="de"><span id="d"></span><span id="h"></span><span id="m"></span><span id="s"></span></p>
@@ -424,6 +1081,24 @@
                         Mark the dates!
 
 </p></div>
+
+
+                         <!-- <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 1" class="composition__photo composition__photo--p1" src="img/Background/back.png">
+
+                        <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 2" class="composition__photo composition__photo--p2" src="img/Background/back.png">
+
+                        <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 3" class="composition__photo composition__photo--p3" src="img/Background/back.png">
+                             <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 4" class="composition__photo composition__photo--p4" src="img/Background/back.png">
+                             <img srcset="img/Background/back.png 300w, img/Background/back.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 5" class="composition__photo composition__photo--p5" src="img/Background/back.png">-->
+                            
+
+
+
 <div class="col-1-of-2">
 	<div class="row">
                    <div class="composition">
@@ -456,7 +1131,8 @@
 			
         </div>
         
-	</div></div></div></div>
+</div></div>
+</div></div>
 </section>
 <section class="section-features" id="organiser">
             <div class="u-center-text u-margin-bottom-big">
@@ -481,11 +1157,11 @@
                         your experience enjoyable and rewarding through a structured environment. We hope to make the
                         conference a landmark MUN and aspire for your support in doing so. I welcome you again and look
                         forward to see you all here at LNMIIT MUN 2019.
-                    </p>
+                    </p><br><br><br>
                     <div class="org-name" style="color: rgb(201, 201, 201); text-align: right">
                         <strong>
-                            <h1>- Ayushi Agarwal</h1><br>
-                            <h1> Secretary General</h1>
+                            <h1 style="color: #fff; font-size: 18px;">- Ayushi Agarwal</h1>
+                            <h1 style="color: #706d6d; font-size: 16px"> Secretary General</h1>
                         </strong>
                     </div>
                      
@@ -515,28 +1191,37 @@
     
 	<div class="container">
         
-    	<h2>COMMITTEES<hr style="width:15%;border-color:#7cc576;border-width:3px;"/></h2>
+    	<h2>COMMITTEES<hr style="width:15%;border-color:#5f5b5b;;border-width:3px;"/></h2>
         <br/>
     <div class="portfolioContainer wow fadeInUp delay-04s">
         
-        <!--<div class="Portfolio-box">
-            <img src="img/Committees/disec.jpg" alt="GADISEC">
+       <!-- <div class="Portfolio-box">
+            <img src="img/Committees/disec.png" alt="AIPPM">
             <h3>GA DISEC</h3>
             <!--<span>Co-Chairperson : Sarthak Tandon<br/>Co-Chairperson : Arveen Chug<br/>Director : Anirudh Agarwal</span>-->
-        <!--</div>
+     <!--   </div>
         
         <div class="Portfolio-box">
-            <img src="img/Committees/odc.jpeg" alt="UNODC">
-            <h3>UNODC</h3>
+            <img src="img/Committees/eco.png" alt="Human Rights Council">
+            <h3>ECOSOC</h3>
             <!--<span>Chairperson : Sakshi Uniyal<br/>Vice-Chairperson : Harishankar P<br/>Director : Kasyap Pasumarthy</span>-->
-        <!--</div>
+    <!--    </div>
         
         <div class=" Portfolio-box">
-            <img src="img/Committees/aipm.jpg" alt="AIPPM">
-            <h3>AIPPM</h3>
+            <img src="img/Committees/child.png" alt="Futuristic Security Council">
+            <h3>UNICEF</h3>
             <!--<span>President : Neel Duttaroy<br/>Deputy President : Barnamoy Roy<br/>Director : Madhav Singh</span>-->
-	    <!--</div>-->
-         <figure class="snip1256">
+     <!--   </div>
+        
+        <div class=" Portfolio-box" >
+            <img src="img/Committees/aippm.png" alt="Crisis Committee">
+            <h3>AIPPM</h3>
+           <!-- <span>Chairperson : D M Varun<br/>Vice-Chairperson : Ayush R<br/>Director : Kumar Prasun</span> -->
+      <!--  </div>
+
+<!--- extra effects -->
+
+        <figure class="snip1256">
   <img src="img/Committees/disec.png" alt="sample42"/>
   <figcaption>
     <h3>Dylan Meringue</h3>
@@ -556,7 +1241,9 @@
     <h3>Penny Tool</h3>
     <p>Dad buried in landslide! Jubilant throngs fill streets! Stunned father inconsolable - demands recount!</p><a href="#" class="read-more">Read More</a>
   </figcaption>
-</figure>     
+</figure>
+<!-- extra effects end-->
+         
         
     </div>
     
@@ -624,8 +1311,8 @@
                 <h3 class="wow fadeInDown delay-03s">Suddep Kaur Arora</h3>
                 <span class="wow fadeInDown delay-03s">DSG</span>
             </div>-->
-		
-		<div class="container">
+
+<div class="container">
   <div class="bg-items" style="width:280px; height:420px;">
     <div class="items" style="background-image : url('img/Secretariat/sudeep.jpg');width:240px; height:380px;">
       <div class="one"></div>
@@ -797,18 +1484,9 @@
   </div>
 </div>
 
-           
-
-
-            
-
-            
-        
-
             </div>
     </div>
-</section><!--main-section team-end-->
-
+</section>
 
 
 <section class="business-talking"><!--business-talking-start-->
@@ -825,8 +1503,8 @@
         <div class="row">
         	<div class="col-lg-6 col-sm-7 wow fadeInLeft">
             	<div class="contact-info-box address clearfix">
-                	<!--<h3><i class=" icon-map-marker"></i>Address:</h3>
-                    <span>ITM University, </br> AH-43 Bypass, Jhansi Rd, Gwalior,</br> Madhya Pradesh 475001</span>-->
+                	<h3><i class=" icon-map-marker"></i>Address:</h3>
+                    <span>ITM University, </br> AH-43 Bypass, Jhansi Rd, Gwalior,</br> Madhya Pradesh 475001</span>
                 </div>
                 <div class="contact-info-box phone clearfix">
                 	<h3><i class="fa-phone"></i>Phone:</h3>
@@ -851,7 +1529,7 @@
 
 <footer class="footer">
     <div class="container">
-        <span class="copyright">&copy; SIERRA MUN </span>
+        <span class="copyright">&copy; BIKANER MUN </span>
     </div>
 </footer>
 
@@ -945,7 +1623,8 @@ $(window).load(function(){
 });
 
 </script>
-	<script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+        <script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
         <script type="text/javascript" src="js/jquery.windy.js"></script>
         <script type="text/javascript">	
 			$(function() {
